@@ -1,0 +1,2286 @@
+@charset "utf-8";
+
+
+/* 공통 */
+/* 폰트 color */
+.fc_6E6F71 { color:#6E6F71; }
+.fc_20B3AA { color:#20B3AA; }
+/*input */
+.inp_comm { border:none; border-bottom:1px solid #CFCFCF; }
+.inp_comm::placeholder { color:#9E9E9E; }
+
+/* width */
+.w_49 { width:49% !important; }
+.w_50 { width:50% !important; }
+
+/* float */
+.f_left { float:left !important; }
+.f_right { float:right !important; }
+
+/* 레이아웃 */
+body { overflow-x:hidden; }
+#wrap { width:100%; float:left; }
+.container { display:block; width:100%; float:left; }
+
+/* header */
+/* pc */
+.wrapHeader { 
+	position:fixed;
+	width:13%; 
+	height:100%;
+	float:left; 
+	z-index:2001;
+}
+.header { 
+	width:100%; 
+	float:left; 
+	height:100%; 
+	border-right:1px solid #ddd;
+	box-sizing:border-box;
+	background:#fff;
+}
+.logo { width:80%; margin:0 auto; margin-top:30px; }
+.logo img { width:100%; }
+/* grobalNaviBar */
+.grobalNaviBar { width:100%; float:left; }
+/*.gnb { width:90%; float:right; margin-top:110px; }*/
+.gnb { width:90%; float:right; margin-top:30px; }
+.gnb ul li {
+	width:100%;
+	float:left;
+	height:24px;
+	margin:14px 0; 
+}
+.gnb ul li h2 {
+	display:block;
+	height:24px;
+	line-height:24px;
+	font-size:18px;
+	color:#6E6F71;
+	letter-spacing:-1px;
+}
+.gnb ul li.on h2 { width:100%; float:left; color:#20B3AA; font-weight:bold; }
+.gnb ul li.on a { color:#20B3AA; }
+.gnb ul li.on a:hover,
+.gnb ul li.on a:link,
+.gnb ul li.on a:active,
+.gnb ul li.on a:visited{ color:#20B3AA; }
+.menuselOn {
+	display:inline-block;
+	width:5px; 
+	height:24px;
+	float:right; 
+	background:#20B3AA;
+}
+.ico_comm { 
+	width:10%; 
+	height:24px; 
+	float:left; 
+	margin-right:1em; 
+}
+.ico_comm img { width:100%; }
+
+.btn_m_gnbOpen { display:none;}
+
+.depthmenu { 
+	width:90%; 
+	float:left; 
+	margin-top:20px;
+	background:#f3f3f3; 
+	border-top:1px solid #ddd;
+	border-left:1px solid #ddd;
+	box-sizing:border-box;
+}
+.depthmenu ul li {
+	width:100%;
+	float:left;
+	margin:0;
+	height:40px;
+}
+.depthmenu ul li h3 {
+	display:block;
+	text-indent:20px;
+	font-size:15px;
+	color:#6E6F71;
+	line-height:40px;
+}
+.depthmenu ul li.on h3 { color:#20B3AA; font-weight:600; }
+.depthmenu ul li .menuselOn { height:20px; margin-top:10px; }
+
+
+/* contents */
+.container { 
+	position:relative;
+	width:72%; 
+	float:left;
+	height:100%;
+	margin-left:13%;
+	/* background:yellow; 
+	background:#FBFBFB;*/
+}
+.wrapContents { width:92%; margin:0 auto; margin-top:50px; }
+
+/* 상단 일시 */
+.wrapStaffInfo {
+	display:block;
+	width:100%;
+	float:left;
+	height:100px;
+	background:#DDF6F5;
+	border:1px solid #71C5C1;
+	box-sizing:border-box;
+	border-radius:15px;
+	position:relative;
+}
+.staffInfo {
+	display:block;
+	padding:0 50px;
+	margin-top:30px;
+}
+.img_top_Staff {
+	position:absolute;
+	right:100px;
+	bottom:0;
+	width:206px;
+}
+.img_top_Staff img { width:100%; }
+.m_StaffInfo { display:none; }
+.m_s_title { display:none; }
+
+/* side */
+.wrapMember {
+	position:fixed;
+	top:0;
+	right:0;
+	width:15%;
+	height:100%;
+	border-left:1px solid #ddd;
+	box-sizing:border-box;
+	background:#fff;
+}
+.memberBox { width:100%; float:left; text-align:center; }
+/* 직원정보 */
+.memberInfo {
+	width:40%;
+	margin:0 auto;
+	margin-top:84px;
+}
+.memberInfo img { width:100%; }
+.userName {
+	display:block;
+	margin-top:15px;
+	font-size:16px;
+	letter-spacing:0;
+}
+.userName span { font-weight:500; }
+.userTeam { color:#14B3AA; font-size:16px; }
+.btn_logOut_mbBox {
+	display:inline-block;
+	padding:4px 15px;
+	margin-top:15px;
+	border:1px solid #20B3AA;
+	color:#20B3AA;
+	border-radius:50px;
+	font-size:16px;
+}
+/* 알림박스 */
+.m_alarmBox { width:100%; float:left; }
+.m_r_title {
+	width:100%;
+	float:left;
+	padding:20px 0;
+	margin-top:120px;
+	border-top:1px solid #C4C4C4;
+	border-bottom:1px solid #C4C4C4;
+	box-sizing:border-box;
+	position:relative;
+	color:#14B3AA;
+}
+.ico_alarm { 
+	width:8%; 
+	float:left; 
+	margin-right:15px;
+	margin-left:20px;
+}
+.ico_alarm img { width:100%; }
+.ico_new_alarm {
+	position:absolute;	
+	top:8px;
+	left:26px;
+	display:inline-block;
+	width:20px;
+	border:1px solid #FF6E6E;
+	box-sizing:border-box;
+	border-radius:20px;
+	color:#fff;
+	background:#FF6E6E;
+	text-align:center;
+	font-size:13px;
+}
+.m_alr_date { font-size:13px; color:#8D8D8D; } 
+.m_alr_writer { display:inline-block; margin-left:10px; }
+.m_alr_writer b { font-weight:normal; }
+
+.m_alarmList { width:100%; float:left; }
+.m_alarmList ul li {
+	width:100%;
+	float:left;
+	padding:12px 0;
+	border-bottom:1px solid #ddd;
+}
+.m_alarmList ul li a { display:block; }
+.m_alr_title { width:100%; float:left; }
+
+.m_alarmList ul li .m_alr_tit {
+	display:block;
+	width:80%;
+	white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.confirmBox { 
+	display:block; 
+	width:5px; 
+	height:45px;
+	float:left; 
+	margin-right:20px;
+	background:#9F9F9F; 
+}
+.confirmBox.unconfirm { background:#FF6E6E; }
+.confirmBox.confirm { background:#9F9F9F; }
+
+.m_alarmList ul li.on a .unconfirmed {
+	font-weight:bold;
+}
+.ico_new {
+	display:inline-block;
+	width:20px;
+	margin-left:3px;
+	background:#FF2626;
+	color:#fff;
+	font-size:12px;
+	text-align:center;
+	border:1px solid #FF2626;
+	box-sizing:border-box;
+	border-radius:20px;
+	font-weight:normal;
+}
+
+.m_alr_date { display:inline-block; }
+
+
+/* 메인 */
+/* 메인컨텐츠 */
+.main_contents { width:100%; float:left; }
+.m_substance { width:90%; margin:auto; }
+.mainBox { 
+	width:48%; 
+	float:left;
+	min-height:385px;
+	margin-top:40px;
+	background:#fff;
+	border:1px solid #ddd;
+	border-radius:15px;
+}
+.mainBox_title { 
+	width:100%; 
+	float:left; 
+	margin-top:30px; 
+	padding-bottom:10px;
+	border-bottom:1px solid #14B3AA;
+}
+.mBox_title { 
+	display:inline-block; 
+	color:#14B3AA; 
+	vertical-align:0; 
+	font-weight:500;
+	letter-spacing:-1px;
+}
+.ico_m_comm { display:inline-block; width:18px; }
+.ico_m_comm img { width:100%; }
+.btn_m_more {
+	width:20px;
+	height:20px;
+	float:right;
+	margin-top:5px;
+	text-align:center;
+	background:#14b3aa;
+	border-radius:20px;
+}
+.btn_m_more span {
+	display:inline-block;
+	margin-top:-5px;
+	color:#fff !important;
+	font-size:18px;
+	vertical-align:middle;
+}
+.mainBoxCont { width:100%; float:left; }
+.mainBoxCont ul li {
+	width:100%;
+	float:left;
+	padding:5px 0;
+	border-bottom:1px solid #CFCFCF;
+}
+.mainBoxCont ul li a { display:block; padding:0 10px; }
+.mainBoxCont ul li p {
+	width:100%;
+	float:left;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.main_new_tit { font-weight:500; font-size:16px; }
+.m_comm_wDay,
+.m_comm_writer {
+	display:inline-block;
+	color:#8D8D8D;
+}
+.m_comm_writer { margin-left:10px; }
+
+
+
+
+/* 컨텐츠 contents */
+/* 근태관리 */
+.contents {
+	width:100%;
+	float:left;
+	min-height:800px; 
+	height:auto;
+	margin:40px 0 0 0;
+	border:1px solid #ddd;
+	border-radius:15px;
+	background:#fff; 
+}
+.substance { width:95%; margin:0 auto; }
+.contentsBox { width:100%; float:left; }
+.selectMonth { 
+	width:100%; 
+	float:left; 
+	margin:30px 0;
+	text-align:center; 
+}
+.presentDay {
+	display:inline-block;
+	margin:0 15px;
+	font-size:30px;
+	vertical-align:-5px;
+}
+.btn_daycomm {
+	display:inline-block;
+	width:12px;
+}
+.btn_mthMove { 
+	display:inline-block;
+	width:30px;
+	margin-left:10px;
+}
+.btn_daycomm img,
+.btn_mthMove img { width:100%; }
+
+/* 선택항목 */
+.selecInfoBox {
+	width:100%;
+	float:left;
+	padding:20px 0;
+	margin-bottom:30px;
+	background:#fff;
+	border:1px solid #ddd;
+	box-sizing:border-box;
+	border-radius:10px;
+}
+.selRadioBox {
+	float:left;
+	margin-left:2em;
+}
+.schdInfo {
+	float:right;
+	margin-right:2em;
+}
+.schdInfo ul li {
+	display:inline-block;
+	padding:0 5px;
+	margin-left:10px;
+}
+.attdWork {
+	background:#fff;
+	border:1px solid #C8C8C8;
+	color:#000;
+}
+.attdWork a,
+.attdWork a:link,
+.attdWork a:hover,
+.attdWork a:active,
+.attdWork a:visited {
+	background:#fff;
+	color:#000;
+}
+
+.attdClosed {
+	background:#FF6E6E;
+	border:1px solid #C8C8C8;
+	/* border:1px solid #f55656; */
+	color:#fff;
+}
+.attdClosed a,
+.attdClosed a:link,
+.attdClosed a:hover,
+.attdClosed a:active,
+.attdClosed a:visited {
+	background:#FF6E6E;
+	color:#fff;
+}
+.attdPaidDay {
+	background:#FFFACF;
+	border:1px solid #C8C8C8;
+	/* border:1px solid #CBC7A1; */
+	color:#636049;
+}
+.attdPaidDay a,
+.attdPaidDay a:link,
+.attdPaidDay a:hover,
+.attdPaidDay a:active,
+.attdPaidDay a:visited {
+	background:#FFFACF;
+	color:#636049;
+}
+.attdPaidHalfDay {
+	background:#D6E9C2;
+	border:1px solid #C8C8C8;
+	/* border:1px solid #9BB47F; */
+	color:#546330;
+}
+.attdPaidHalfDay a,
+.attdPaidHalfDay a:link,
+.attdPaidHalfDay a:hover,
+.attdPaidHalfDay a:active,
+.attdPaidHalfDay a:visited {
+	background:#D6E9C2;
+	color:#546330;
+}
+.attendanceBox { 
+	width:100%; 
+	height:500px;
+	overflow:auto; /* 스크롤 있는 경우에만 표시 */
+}
+.attendanceBox::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+.attendanceBox::-webkit-scrollbar-thumb {
+  background-color:#2f3542;
+  border-radius:10px;
+  background-clip: padding-box;
+}
+.attendanceBox::-webkit-scrollbar-track {
+  background-color:#ddd;
+  border-radius:10px;
+  box-shadow:inset 0px 0px 3px #ccc;
+}
+
+.tblBox { 
+	width:100%; 
+	float:left; 
+}
+.tbl_attd { width:100%; }
+.tbl_attd th,
+.tbl_attd td { 
+	height:30px;
+	line-height:30px;
+	text-align:center; 
+	/* 
+	border-right:1px solid #C8C8C8;
+	border-bottom:1px solid #C8C8C8;
+	box-sizing:border-box;
+	*/
+}
+.tbl_attd th { 
+	background:#DDF6F5; 
+	color:#000; 
+	border-top:1px solid #71C5C1;
+	border-bottom:1px solid #71C5C1;
+}
+.tbl_attd td a { 
+	display:block; 
+	line-height:30px; 
+}
+/*
+.tbl_attd td .attdClosed {
+	background:#DFEEFF;
+	border:1px solid #4882C4;
+	color:#4882C4;
+}
+*/
+.tbl_attd td .attdClosed {
+	background:#FF6E6E;
+	/* border:1px solid #f55656; */
+	color:#fff;
+}
+.tbl_attd td .attdPaidDay {
+	background:#FFFACF;
+	/*border:1px solid #CBC7A1;*/
+	color:#636049;
+}
+.tbl_attd td .attdPaidHalfDay {
+	background:#D6E9C2;
+	/*border:1px solid #9BB47F;
+	border-collapse:collapse; */
+	color:#546330;
+}
+.btnBox { 
+	width:100%; 
+	float:left; 
+	/*margin-top:30px; */
+	margin-top:10px; 
+	text-align:center; 
+}
+.btn_change {
+	display:inline-block;
+	padding:3px 30px;
+	text-align:center;
+	font-size:18px;
+	background:#20B3AA;
+	border:1px solid #20B3AA;
+	border-radius:25px;
+	color:#fff;
+}
+
+/* 근태관리 변경 시 layer */
+.layerBox {
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	float:left;
+	height:100%;
+	background:rgba(0, 0, 0, 0.8);
+	z-index:8001;
+}
+.layerBox_in { 
+	width:95%; 
+	margin:0 auto; 
+	position:absolute;
+	top:50%;
+	left:50%;
+}
+.layerBox_contents { 
+	width:100%; 
+	float:left; 
+	height:900px;
+	margin-top:-420px;
+	margin-left:-50%;
+	background:#fff;
+	border-radius:15px;
+}
+.ly_contents { width:100%; float:left; margin-top:50px; }
+.btn_layerClose {
+	position:absolute;
+	top:-480px;
+	left:45%;
+	z-index:9001;
+	width:38px;
+}
+.btn_layerClose img { width:100%; }
+.attdSch_modifyBox { 
+	width:100%; 
+	float:left; 
+	height:650px;
+	min-height:650px; 
+	overflow:auto; 
+	padding-bottom:20px;
+	margin-top:30px;
+}
+.attdSch_modifyBox::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+.attdSch_modifyBox::-webkit-scrollbar-thumb {
+  background-color:#2f3542;
+  border-radius:10px;
+  background-clip: padding-box;
+}
+.attdSch_modifyBox::-webkit-scrollbar-track {
+  background-color:#ddd;
+  border-radius:10px;
+  box-shadow:inset 0px 0px 3px #ccc;
+}
+.tbl_attdSch {
+	width:100%;
+	float:left;
+	border-left:1px solid #ddd;
+	border-top:1px solid #71C5C1;
+	box-sizing:border-box;
+}
+.tbl_attdSch th,
+.tbl_attdSch td {
+	padding:5px 0;
+	text-align:center;
+	box-sizing:border-box;
+	letter-spacing:-2px; 
+}
+.tbl_attdSch th {
+	background:#DDF6F5;
+	border-right:1px solid #71C5C1;
+	border-bottom:1px solid #71C5C1;
+}
+.tbl_attdSch td {
+	overflow:auto;
+	border-right:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+}
+.tbl_attdSch .sat { color:#3075FF; }
+.tbl_attdSch .sun { color:#FF3030; }
+.bg_gray { background:#F2F2F2; }
+.bg_yellow { background:#fffae8; }
+.attdMorning,
+.attdMorning a,
+.attdMorning a:link,
+.attdMorning a:hover,
+.attdMorning a:active,
+.attdMorning a:visited {
+	background:#DFEEFF;
+	color:#4882C4;
+}
+.attdAfternoon,
+.attdAfternoon a,
+.attdAfternoon a:link,
+.attdAfternoon a:hover,
+.attdAfternoon a:active,
+.attdAfternoon a:visited {
+	background:#ffdcb6;
+	color:#ac7a44;
+}
+.today { 
+	display:block; 
+	background:#ffdcf9; 
+	border-right:1px solid #ed97df !important; 
+	border-left:1px solid #ed97df !important; 
+}
+
+/* 영업현황 */
+.pc_tbl_total { display:auto; }
+.m_tbl_total { display:none; }
+.tbl_sales { width:100%; margin-bottom:30px; }
+.tbl_sales th,
+.tbl_sales td {
+	padding:5px 0;
+	border-right:1px solid #C8C8C8;
+	border-bottom:1px solid #C8C8C8;
+	text-align:center;
+}
+.tbl_sales th {
+	background:#F2F2F2;
+}
+.tbl_sales th.bg_grn {
+	background:#DDF6F5;
+}
+.tbl_sales th.brd_grn {
+	border-top:1px solid #71C5C1;
+	border-bottom:1px solid #71C5C1;
+}
+.tbl_sales .bg_yllw {
+	background:#FFFCF5;
+}
+.tbl_sales .bg_wht {
+	background:#fff;
+}
+.tbl_sales .bor_top1 { border-top:1px solid #C8C8C8; }
+.sal_result { color:#FF2626; }
+.artiBox { width:100%; float:left; }
+.s_title_grn { 
+	width:100%; 
+	float:left; 
+	margin-bottom:15px;
+	color:#14B3AA; 
+	font-weight:500; 
+	font-size:16px;
+}
+.tbl_sales2 th,
+.tbl_sales2 td { border-bottom:none; }
+.box_line { 
+	border:1px solid #909090 !important; 
+	box-sizing:border-box;
+}
+
+
+/* 임직원정보 */
+.s_title_grn.empl { margin-top:80px; }
+.allTeamMemberBox {
+	width:100%;
+	float:left;
+	position:relative;
+	left:0;
+	/* background:yellow; */
+}
+.teamNameBox {
+	width:32%;
+	float:left;
+	left:0;
+	height:auto;
+}
+.teamNameBox ol li {
+	width:100%;
+	float:left;
+	margin-bottom:10px; 
+	border:1px solid #BABABA;
+	background:#FBFBFB;
+	box-sizing:border-box;
+	text-indent:20px;
+	line-height:50px;
+}
+.teamNameBox ol li a { display:block; }
+.teamNameBox ol li.on {
+	border-color:#20B3AA;
+	background:#fff;
+}
+.teamNameBox ol li.on a {
+	color:#20B3AA;
+	font-weight:500;
+}
+.teamNameBox ol li.on .partTeamList ul li a { 
+	color:#000; 
+	border-color:#BABABA; 
+	font-weight:normal;
+}
+.teamNameBox ol li.on .partTeamList ul li.on a { 
+	color:#20B3AA; 
+	border-color:#20B3AA; 
+	font-weight:500;
+}
+
+.partTeamBox { 
+	position:absolute;
+	top:0;
+	left:34%;
+	width:32%;
+	/*height:100%;*/
+	float:left;
+	/* background:pink; */
+}
+
+.partTeamList { width:100%; float:left; }
+.partTeamList ul li { 
+	width:100%;
+	float:left;
+	margin-bottom:0; 
+}
+.partTeamList ul li a { display:block; }
+.ico_tree { 
+	width:10px; 
+	float:left;
+	margin-right:10px;
+}
+.ico_tree img { width:100%; }
+
+.empMemberBox { 
+	width:100%; 
+	float:left; 
+	padding-bottom:10px; 
+	background:#f8f8f8; 
+}
+.empMemberBox ul li { background:none; border:none; }
+.s_userInfoBox { width:60%; float:left; }
+.ico_employee {  
+	text-indent:0;
+	display:inline-block;
+	width:38px; 
+	margin-top:10px;
+	border-radius:50%;
+	border:1px solid #ddd;  
+	box-sizing:border-box;	
+}
+.ico_employee img { width:100%; }
+.s_userName { 
+	display:inline-block;  
+	font-weight:normal; 
+	text-indent:0;
+}
+.jobGrade { 
+	display:inline-block; 
+	text-indent:5px;
+}
+.s_memberViewInfoBox {
+	width:40%;
+	float:right;
+	margin-top:12px;
+}
+.btn_employeeInfo { 
+	text-indent:0;
+	display:inline-block; 
+	width:40px; 
+	float:right;
+	margin-right:20px;
+	text-align:right; 
+}
+.btn_employeeInfo img {  width:100%; }
+.btn_empCall { 
+	display:none; /* 640px일 때 생김 */
+	text-indent:0;
+	width:34px; 
+	float:right; 
+	margin-left:10px; 
+}
+.btn_empCall img { width:100%; }
+.empMemberBox_single { 
+	width:100%;
+	float:left;
+	border:1px solid #BABABA;
+	padding:10px 0;
+}
+.layerBox_employeeInfo {
+	position:absolute;
+	left:106%;
+	top:0;
+	width:100%;
+	/* background:pink; */
+}
+.employeeInfoBox {
+	width:100%;
+	float:left;
+	padding:30px 0 50px 0; 
+	border:1px solid #BABABA;
+	box-sizing:border-box;
+}
+.employeeInfoBox .m_memberInfo { width:60%; margin:0 auto; text-align:center; }
+.employeeInfoBox .m_memberInfo .m_memberImg { 
+	display:inline-block;
+	width:50%;
+	margin-bottom:10px;
+	text-indent:0; 
+	text-align:center !important;
+	border:1px solid #ddd;
+	border-radius:50%;
+	box-sizing:border-box;
+}
+.employeeInfoBox .m_memberInfo .m_memberImg img { width:100%; }
+.employeeInfoBox .m_memberInfo .member_detailTeam {
+	width:100%;
+	float:left;
+	margin-top:30px;
+	text-indent:0;
+	text-align:center;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox { 
+	width:100%; 
+	float:left; 
+	margin-top:20px; 
+	text-align:center;
+	/* background:yellow; */
+}
+.employeeInfoBox .m_memberInfo .member_detailBox ul li { 
+	text-indent:0; 
+	border-bottom:1px solid #ddd;
+	padding:8px 0;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox ul li:nth-child(1) {
+	border-top:1px solid #ddd;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox .basicInfo {
+	width:100%;
+	float:left;
+	text-align:left;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox .basicInfo dt { 
+	display:inline-block; 
+	text-indent:0;
+	margin-right:10px; 
+	font-weight:normal !important;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox .basicInfo dd {
+	display:inline-block; 
+	text-indent:0;
+	font-weight:normal !important;
+}
+/*
+.employeeInfoBox .m_memberInfo .member_detailBox p,
+.employeeInfoBox .m_memberInfo .member_detailBox p b { font-weight:normal !important; }
+*/
+.employeeInfoBox .m_memberInfo .member_detailBox .btn_call {
+	display:none;
+	/* display:inline-block; */ /* 해상도 640px 일때 오픈 */
+	width:20%;
+	margin-top:20px;
+	text-indent:0;
+}
+.employeeInfoBox .m_memberInfo .member_detailBox .btn_call img { width:100%; }
+
+
+/* 게시판 */
+/* 공지사항 */
+.s_title_grn.bord { margin-top:50px; }
+
+
+/* 코스관리 */
+.tabmenu { 
+	width:100%; 
+	float:left; 
+	margin-top:50px; 
+}
+.tabmenu ul {	width:100%;	float;left; }
+.tabmenu ul li {
+	width:20%;
+	float:left;
+	height:45px;
+	text-align:center;
+	background:#f8f8f8;
+	border:1px solid #ddd;
+	box-sizing:border-box;
+}
+.tabmenu ul li a { display:block; line-height:45px; }
+.tabmenu ul li.on {
+	background:#fff;
+	border-color:#20B3AA;
+}
+.tabmenu ul li.on a {
+	color:#20B3AA;
+}
+.tabmenu2 { margin-top:15px; }
+.tabmenu2 ul li { width:10%; }
+
+.tabmenu3 ul li {
+	width:11.11%;
+}
+
+.selecInfoBox2 { 
+	margin-top:15px; 
+	padding:10px 0; 
+	border-radius:5px; 
+}
+.courseBoard { width:100%; float:left; overflow:auto; }
+.course_type { width:100%; }
+.course_type th,
+.course_type td {
+	padding:8px 0;
+	text-align:center;
+}
+.course_type th {
+	border-top:1px solid #71C5C1;
+	border-bottom:1px solid #71C5C1;
+	border-right:1px solid #71C5C1;
+	background:#DDF6F5;
+	box-sizing:border-box;
+}
+.course_type td {
+	padding:10px 5px;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+	box-sizing:border-box;
+}
+.course_type td.date { color:#aaa; }
+.c_b_title {
+	display:inline-block;
+	text-align:left;
+	width:100%;
+	overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-line-clamp:1; /* 라인수 */
+  -webkit-box-orient:vertical;
+  word-wrap:break-word; 
+  line-height:1.2em;
+  height:1.2em;
+}
+.c_b_title:hover { text-decoration:underline; color:#20B3AA; }
+.ico_course {
+	display:inline-block;
+	padding:2px 5px;
+	border:1px solid #ddd;
+	background:#fff;
+	border-radius:3px;
+	box-sizing:border-box;
+}
+.ico_courIng {
+	background:#FF6E6E;
+	border-color:#ee5c5c;
+	color:#fff;
+}
+.ico_courFin {
+	background:#e0e0e0;
+	border-color:#aaa;
+}
+.ico_courIng:hover,
+.ico_courIng:link,
+.ico_courIng:active,
+.ico_courIng:visited {
+	background:#FF6E6E;
+	border-color:#ee5c5c;
+	color:#fff;
+}
+.ico_courFin:hover,
+.ico_courFin:link,
+.ico_courFin:active,
+.ico_courFin:visited {
+	background:#e0e0e0;
+	border-color:#aaa;
+}
+.courseBoard::-webkit-scrollbar {
+	width:10px;
+	height:10px;
+}
+.courseBoard::-webkit-scrollbar-thumb {
+  background-color:#2f3542;
+  border-radius:10px;
+  background-clip: padding-box;
+}
+.courseBoard::-webkit-scrollbar-track {
+  background-color:#ddd;
+  border-radius:10px;
+  box-shadow:inset 0px 0px 3px #ccc;
+}
+.selectView { display:none; }
+/* 코스관리 등록 */
+.course_type2 { margin-top:50px; }
+.course_type2 th {
+	border-right:none;
+}
+.course_type2 td {
+	padding:10px 15px;
+	border-top:1px solid #ddd;
+	border-right:none;
+}
+.course_type2 td .tabmenu { margin-top:0; }
+.course_type2 td .selRadioBox { margin-left:0; }
+.cor_inp_title {
+	width:100%;
+	float:left;
+	background:#f8f8f8;
+	box-sizing:border-box;
+	border-right:none !important;
+	border-bottom:none !important;
+}
+.cor_contents {
+	width:100%;
+	float:left;
+	height:200px;
+	background:#f8f8f8;
+	box-sizing:border-box;
+	border-right:none !important;
+	border-bottom:none !important;
+	font-size:15px;
+	text-indent:15px;
+	text-align:left !important;
+}
+.photoviewBox { width:100%; float:left; margin-top:10px; text-align:left; }
+.photoviewBox ul li { 
+	display:inline-block; 
+	float:left; 
+	width:auto;
+	margin-right:10px;
+	position:relative;
+	top:0;
+}
+.corB_photo {
+	display:inline-block;
+	width:80px;
+	height:80px;
+	text-indent:0;
+	margin-left:0;
+	border:1px solid #ddd;
+	box-sizing:border-box;
+	text-align:center;
+	background:url(../img/sub/ico_noImage@2x.jpg) no-repeat center center;
+	background-size:50%;
+}
+.corB_photo img { width:100%; }
+.btn_phtoDelete {
+	position:absolute;
+	right:0;
+	top:0;
+	width:20px;
+	height:20px;
+	background:#bbb;
+	z-index:1001;
+	color:#fff;
+	vertical-align:-1px;
+	font-size:13px;
+}
+
+/* 코스 현황 계획 */
+.tabmenuB ul li { width:25%; }
+.coursePlanBox { 
+	width:100%; 
+	float:left; 
+	margin-top:50px; 
+	padding-bottom:80px;
+	text-align:center; 
+}
+.courseImg { 
+	width:30%; 
+	float:left;
+	margin-left:30px;
+	/* margin:0 auto; */
+}
+.courseImgComm { display:inline-block; height:660px; }
+.coursePlan { width:50%; float:right; }
+.wrapGrid { width:100%; float:left; }
+.gridBox { 
+	width:100%; 
+	height:100%; 
+	border:1px solid #ddd; 
+	box-sizing:border-box;
+}
+.gridBox td {
+	height:30px;
+	border:1px dotted #737373;
+	box-sizing:border-box;
+}
+.gridBox td a { display:block; height:30px; }
+.gridBox td.on a {
+	height:30px; 
+	background:rgba(255,38,38, .6);
+}
+.gridBox td.finish a {
+	height:30px; 
+	background:rgba(80,190,184, .6);
+}
+
+.planTextBox { 
+	position:absolute;
+	top:50%;
+	left:25%;
+	width:30%; 
+}
+.planBox { 
+	width:100%; 
+	float:left; 
+	height:200px; 
+	margin-top:-100px;
+	margin-left:-750px;
+	background:#fff; 
+}
+.btn_layerClose2 {
+	top:-160px;
+	left:200px;
+}
+.courseFormBox {
+	width:100%; 
+	float:left; 
+	/*margin-top:50px;*/
+	margin-top:20px;
+}
+.courInp {
+	width:100%;
+	float:left;
+	background:#f8f8f8;
+	border-right:none !important;
+	border-bottom:none !important;
+}
+
+.shareInp {
+	width:30%;
+	float:left;
+	background:#f8f8f8;
+	border-right:none !important;
+	border-bottom:none !important;
+}
+
+
+.btn_save {
+	display:inline-block;
+	padding:0 20px;
+	background:#14b3aa;
+	color:#fff;
+	border-radius:25px;
+}
+
+
+/* 청룡 1홀 ~ 9홀 이미지 */
+.bd_01 {
+	background:url(../img/course/bd_01.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_02 {
+	background:url(../img/course/bd_02.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_03 {
+	background:url(../img/course/bd_03.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_04 {
+	background:url(../img/course/bd_04.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_05 {
+	background:url(../img/course/bd_05.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_06 {
+	background:url(../img/course/bd_06.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_07 {
+	background:url(../img/course/bd_07.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_08 {
+	background:url(../img/course/bd_08.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bd_09 {
+	background:url(../img/course/bd_09.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+
+/* 백호 1홀 ~ 9홀 이미지 */
+.bak_01 {
+	background:url(../img/course/bak_01.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_02 {
+	background:url(../img/course/bak_02.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_03 {
+	background:url(../img/course/bak_03.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_04 {
+	background:url(../img/course/bak_04.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_05 {
+	background:url(../img/course/bak_05.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_06 {
+	background:url(../img/course/bak_06.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_07 {
+	background:url(../img/course/bak_07.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_08 {
+	background:url(../img/course/bak_08.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.bak_09 {
+	background:url(../img/course/bak_09.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+/* 주작 1홀 ~ 9홀 이미지 */
+.ju_01 {
+	background:url(../img/course/ju_01.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_02 {
+	background:url(../img/course/ju_02.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_03 {
+	background:url(../img/course/ju_03.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_04 {
+	background:url(../img/course/ju_04.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_05 {
+	background:url(../img/course/ju_05.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_06 {
+	background:url(../img/course/ju_06.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_07 {
+	background:url(../img/course/ju_07.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_08 {
+	background:url(../img/course/ju_08.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.ju_09 {
+	background:url(../img/course/ju_09.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+
+/* 현무 1홀 ~ 9홀 이미지 */
+.hyun_01 {
+	background:url(../img/course/hyun_01.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_02 {
+	background:url(../img/course/hyun_02.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_03 {
+	background:url(../img/course/hyun_03.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_04 {
+	background:url(../img/course/hyun_04.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_05 {
+	background:url(../img/course/hyun_05.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_06 {
+	background:url(../img/course/hyun_06.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_07 {
+	background:url(../img/course/hyun_07.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_08 {
+	background:url(../img/course/hyun_08.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+.hyun_09 {
+	background:url(../img/course/hyun_09.jpg) no-repeat 0 center;
+	background-size:100% 100%;
+}
+
+/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+.wrapNameList {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:50%;
+	margin-top:-250px;
+	margin-left:-400px;
+}
+.nameListCheckBox {
+	width:80%;
+	height:500px;
+	background:#fff;
+	border-radius:15px;
+}
+.ListCheckBox { 
+	width:90%; 
+	margin:0 auto; 
+	/* background:yellow; */
+}
+.nameListBox {
+	width:100%;
+	float:left;
+	margin-top:30px;
+	border-top:1px solid #ddd;
+	box-sizing:border-box;
+}
+.nameListBox ul li {
+	width:100%;
+	float:left;
+	padding:5px 0;
+	border-bottom:1px solid #ddd;
+	box-sizing:border-box;
+}
+.nL_name {
+	display:inline-block;
+	float:left;
+	margin:0 15px;
+}
+.nL_date {
+	display:inline-block;
+	float:left;
+}
+.nL_viewp {
+	display:inline-block;
+	float:right;
+	margin-right:15px;
+}
+.nL_viewp span { margin-left:5px; }
+.pagenation { width:100%; float:left; margin:20px 0; }
+.btn_checkApply {
+	display:inline-block;
+	float:right;
+	padding:5px 20px;
+	margin-top:10px;
+	background:#000;
+	color:#fff !important;
+	border-radius:25px;
+}
+.btn_excelDown {
+	display:inline-block;
+	float:right;
+	padding:5px 20px;
+	margin-top:10px;
+	margin-left:10px;
+	background:#0f783f;
+	color:#fff !important;
+	border-radius:25px;
+}
+
+/* 코스관리 추가 요청 개발 2021-12-06 */
+.courPlanListChk {
+	width:60%; 
+	float:right; 
+	margin-right:30px;
+	height:680px;
+	/* background:yellow; */
+	overflow:auto;
+}
+/* 스크롤있을 시 주석 삭제
+.courPlanListChk::-webkit-scrollbar {
+  width:10px;
+  height:10px;
+}
+.courPlanListChk::-webkit-scrollbar-thumb {
+  background-color:#2f3542;
+  border-radius:10px;
+  background-clip: padding-box;
+}
+.courPlanListChk::-webkit-scrollbar-track {
+  background-color:#ddd;
+  border-radius:10px;
+  box-shadow:inset 0px 0px 3px #ccc;
+}
+*/
+.tbl_course { 
+	width:100%; 
+	float:left;  
+}
+.tbl_course th {
+	padding:15px 0;	
+	background:#f8f8f8;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+	box-sizing:border-box;
+}
+.tbl_course td {
+	padding:10px 0;
+	border-bottom:1px solid #ddd;
+	border-right:1px solid #ddd;
+	box-sizing:border-box;
+}
+.tbl_course th:nth-child(4),
+.tbl_course td:nth-child(4) { border-right:none; }
+.tbl_course td:nth-child(2) { text-align:left; padding-left:15px; }
+
+
+/* 코스관리 추가개발 2022-05-10 진현창 요청 */
+.btn_downloadExcel {
+	display:inline-block;
+	float:right;
+	margin-top:50px;
+	margin-bottom:15px;
+	padding:5px 20px;
+	background:#0c6c35;
+	color:#fff;
+}
+.btn_downloadExcel:hover,
+.btn_downloadExcel:link,
+.btn_downloadExcel:visited,
+.btn_downloadExcel:active {
+	color:#fff;
+}
+
+
+
+/* 미디어쿼리 */
+@media screen and (max-width:1366px) {
+	
+	/* header */
+	.gnb ul li h2 { font-size:16px; }
+	
+	/* side right */
+	.wrapMember { width:18%; }
+	
+	/* container */
+	.container { width:69%; }
+	
+	/* 근태관리 */
+	/* 근태관리변경시 */
+	.layerBox_contents { height:720px; margin-top:-350px; }
+	.ly_contents { margin-top:30px; }
+	.btn_layerClose { top:-410px; }
+	.tbl_attdSch { width:200%; }
+	.attdSch_modifyBox { height:500px; min-height:0; }
+	
+	/* 임직원정보 */
+	.ico_employee { width:34px; }
+	.btn_employeeInfo { width:34px; }
+	.employeeInfoBox .m_memberInfo { width:80%; }
+	.employeeInfoBox .m_memberInfo .m_memberImg { width:50%; }
+	
+	/* 코스 현황 계획 */
+	.courseImg { width:40%; margin-left:0; }
+	.planBox { margin-left:-500px; }
+	.btn_layerClose2 { top:-160px; left:170px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList {	margin-left:-300px;	}
+	
+	/* 코스관리 내역 추가 개발 *//*2021-12-06 */
+	.courPlanListChk { width:55%; margin-right:0; }
+	
+	
+}
+
+
+
+@media screen and (max-width:1280px) {
+	
+	/* side right */
+	.memberInfo { width:60%; }
+	.memberInfo img { width:80%; }
+	/* 코스 현황 계획 */
+	.btn_layerClose2 { left:130px; }
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList {	margin-left:-280px;	}
+
+}
+
+
+@media screen and (min-width:1025px) and (max-width:1279px) {
+
+	/* 임직원정보 */
+	.s_userInfoBox { width:auto !important; }
+	.s_memberViewInfoBox { width:auto !important; }
+	.ico_employee { width:28px; }
+	.btn_employeeInfo { width:28px; }
+	/* 코스 현황 계획 */
+	.planTextBox { width:50%; }
+	.btn_layerClose2 { left:200px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:60%; }
+	
+}
+
+@media screen and (max-width:1024px) {
+	
+	/* side */
+	/* 알림내역 */
+	.m_alr_date { display:block; }
+	.m_alr_writer { margin-left:0; }
+	.confirmBox { height:65px; }
+	
+	/* 근태관리 */
+	/* 근태관리변경시 */
+	.tbl_attdSch { width:250%; }
+	
+	/* 임직원정보 */
+	.s_userInfoBox { width:auto !important; }
+	.s_memberViewInfoBox { width:auto !important; }
+	.ico_employee { width:23px; }
+	.btn_employeeInfo { width:23px; }
+	
+	/* 코스 현황 계획 */
+	.planTextBox { width:60%; }
+	.courseImg { width:40%; }
+	.btn_layerClose2 { left:270px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:70%; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:45%; }
+	
+
+}
+
+@media screen and (max-width:980px) {
+
+	/* header */
+	.wrapHeader { width:100%; height:auto; /* position:relative; */ }
+	.pc_header { display:none; }
+	.header { height:auto; }
+	.header.m_header { border-right:none; }
+	.m_header { width:100%; float:left; }
+	.m_t_header { 
+		width:100%; 
+		float:left; 
+		height:80px;
+		border-bottom:1px solid #ddd; 
+	}
+	.m_logo { width:50%; float:left; line-height:65px; }
+	.m_logo img { display:inline-block; width:100%; margin-left:2em; }
+	/* mobile gnb */
+	.btn_m_gnbOpen { 
+		display:block;
+		width:auto; 
+		float:right; 
+		margin-right:2em; 
+		line-height:70px;
+	}
+	.m_top_log_memberBox {
+		width:100%;
+		float:left;
+		padding:20px 0;
+		border-bottom:1px solid #ddd;
+		background:#f8f8f8;
+		text-align:center;
+	}
+	.btn_t_logout {
+		display:inline-block;
+		background:#14B3AA;
+		padding:2px 15px;
+		color:#fff;
+		border-radius:20px;
+	}
+	.btn_mGnbClose { float:right; margin-right:2em; }
+	.m_globalnaviBar {
+		width:100%;
+		float:left;
+		position:absolute;
+		top:0;
+		background:#fff;
+		z-index:9001;
+	}
+	.m_globalnaviBar ul {
+		width:100%;
+		float:left;
+		background:#fff;
+	}
+	.m_globalnaviBar ul li {
+		width:100%;
+		float:left;
+		text-align:center;
+		border-bottom:1px solid #ddd;
+	}
+	.m_globalnaviBar ul li h2 {
+		display:inline-block;
+		padding:20px 0;
+		font-size:16px;
+	}
+	.m_depthmenu { 
+		width:100%; 
+		float:left; 
+		padding:20px 0;
+		background:#f8f8f8 !important;
+	}
+	.m_depthmenu ul li {
+		display:block;
+		width:100%;
+		float:left;
+		padding:5px 0;
+		border-bottom:none !important;
+		background:#f8f8f8 !important;
+	}
+	.fix_depthmenu { 
+		width:100%; 
+		float:left; 
+		background:#f8f8f8; 
+		position:relative;
+		bottom:222px;
+		right:0;
+	}
+	.fix_depthmenu ul { 
+		width:100%; 
+		float:left; 
+		border:1px solid #ddd; 
+	}
+	.fix_depthmenu ul li { 
+		width:100% !important; 
+		float:left; 
+		height:50px;
+		height:auto !important;
+		border-bottom:1px solid #ddd;
+		border-right:none !important;
+		box-sizing:border-box; 
+	}
+	.fix_depthmenu ul li a { margin-top:0 !important; line-height:50px; }
+	.fix_depthmenu ul li:nth-child(3) { border-bottom:none !important; }
+
+	/* fixed menu */
+	.m_fixed_menu { 
+		position:fixed;
+		bottom:0;
+		left:0;
+		width:100%;
+		height:80px;
+		background:#fff;
+		border-top:1px solid #CFCFCF;
+		z-index:6001;
+	}
+	.m_fixed_menu ul li { 
+		width:20%; 
+		float:left; 
+		height:80px;
+		border-right:1px solid #CFCFCF; 
+		text-align:center;
+		box-sizing:border-box;
+	}
+	.m_fixed_menu ul li a { display:block; margin-top:15px; }
+	.m_fixed_menu ul li.fix_alarm a { margin-top:20px; }
+	.m_fixed_menu ul li h2 {
+		width:100%; 
+		float:left; 
+		text-align:center; 
+	}
+	.m_fixed_menu ul li p { width:100%; float:left; margin-top:5px; }
+	.m_fixed_menu ul li.on p { color:#14B3AA; }
+	.fiximg { display:inline-block; width:25px; height:25px; }
+	.fiximg img { width:100%; }
+	.fiximg_alarm {	position:relative; }
+	.m_unconfirm {
+		position:absolute;
+		top:-10px;
+		left:10px;
+		display:inline-block;
+		width:20px;
+		height:20px;
+		background:#FF6E6E;
+		color:#fff;
+		border:1px solid #FF6E6E;
+		border-radius:25px;
+		font-size:13px;
+	}
+	
+	/* side right */
+	.wrapMember { display:none; }
+	
+	/* container */
+	.container { 
+		width:100%; 
+		float:left;
+		margin-left:0;
+		background:#fff;
+		margin-top:80px;  /* 상단 top 미고정시 수정(삭제)해야할 것 */
+	}
+	.wrapContents { width:95%; }
+	.wrapStaffInfo { display:none; }
+	.m_StaffInfo { 
+		display:block; 
+		width:100%; 
+		float:left; 
+		height:70px; 
+		background:#F1F1F1; 
+	}
+	.staffInfo_m { width:95%; margin:0 auto; }
+	.staffInfo_m .toDay { 
+		display:inline-block; 
+		float:right; 
+		line-height:70px;
+	}
+	.staffInfo_m .m_t_userName { 
+		display:inline-block; 
+		float:left;
+		line-height:70px;
+	}
+	.staffInfo_m .m_t_userName b { margin-left:10px; }
+	.ico_smile { 
+		display:inline-block;
+		width:30px; 
+		height:30px; 
+		float:left; 
+		line-height:70px;
+	}
+	.ico_smile img { width:100%; }
+	
+	/* mobile title */
+	.m_s_title { width:100%; float:left; border-bottom:1px solid #20B3AA; }
+	.m_s_title { display:block; height:60px; line-height:60px; }
+	.m_s_title h3 { width:95%; margin:0 auto; }
+	.m_s_title b { 
+		display:inline-block;
+		margin-left:10px;
+		line-height:60px; 
+		color:#20B3AA; 
+		font-size:18px; 
+	}
+	.s_tit_img { width:30px; float:left; line-height:60px;  }
+	.s_tit_img img { width:100%; }
+	
+	/* main */
+	/* main 게시판 */
+	.main_contents { padding-bottom:150px; }
+	
+	
+	/* contents */
+	.contents { border:none; }
+	/* 근태관리 */
+	/* 달력선택 및 이전날+이후날 */
+	.selectMonth { margin-top:0; }
+	/* 근태 이름선택시, 통화가능 */
+	/* 
+	.layerBox {
+		position:fixed;
+		top:0;
+		left:0;
+		width:100%;
+		float:left;
+		height:100%;
+		background:rgba(0, 0, 0, 0.8);
+		z-index:9001;
+	}
+	*/
+	
+	/* 영업현황 */
+	.artiBox.w_49 { width:100% !important; float:left; }
+	.artiBox.w_49.f_right { padding-bottom:100px; }
+	
+	/* 임직원정보 */
+	.s_title_grn { display:none; }
+	
+	/* 코스관리 */
+	.tabmenu { margin-top:0; }
+	.tabmenu2 { margin-top:15px; }
+	
+	/* 코스 현황 계획 */
+	.coursePlanBox { padding-bottom:150px; }
+	.courseImg { width:40%; }
+	.btn_layerClose2 { left:250px; }
+	
+	/* 코스관리 추가개발 2022-05-10 진현창 요청 */
+	.btn_downloadExcel {
+		margin-top:0;
+	}
+	
+	
+	
+}
+
+@media screen and (max-width:800px) {
+	
+	/* 근태관리 */
+	/* 근태관리변경시 */
+	.layerBox_contents { height:540px; margin-top:-250px; }
+	.btn_layerClose { top:-290px; width:24px; }
+	.tbl_attdSch { width:300%; }
+	.attdSch_modifyBox { height:350px; min-height:0; }
+	.ly_contents .btnBox { margin-top:15px; }
+	.ly_contents .btn_change { font-size:16px; }
+	.layerBox_contents .presentDay { font-size:20px; }
+	.layerBox_contents .btn_mthMove { width:25px; }
+	.layerBox_contents .btn_daycomm { width:8px; }
+	
+	/* 코스관리 */
+	.course_type2 { margin-top:0; }
+	/* 코스 현황 계획 */
+	.planBox { margin-left:-420px; }
+	.btn_layerClose2 { top:-140px; left:200px; }
+	/* 코스관리 작업공유 */
+	.selectMonth_cou { margin-top:30px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { margin-left:-220px; }
+	
+}
+
+@media screen and (max-width:768px) {
+	
+	/* 코스 현황 계획 */
+	.btn_layerClose2 { left:170px; }
+	
+}
+
+@media screen and (max-width:640px) {
+	
+	/* mobile menu */
+	.btn_m_gnbOpen { margin-right:1em; }
+	.btn_m_gnbOpen img { width:70%; }
+	
+	
+	/* main */
+	/* main contents */
+	.main_contents { padding-bottom:80px; }
+	.mainBox { 
+		width:100%; 
+		float:left; 
+		margin-top:0;
+		border:none;
+		border-radius:0;
+		min-height:auto; 
+	}
+	.mainBox.f_right { float:left; }
+	.m_substance { width:100%; float:left; }
+	.mainBox_title { 
+		margin-top:0; 
+		padding-bottom:0; 
+		padding:10px 0; 
+	}
+	.mBox_title { font-size:18px; }
+	.ico_m_comm { 
+		width:23px; 
+		margin-left:20px; 
+		vertical-align:0; 
+	}
+	.btn_m_more { margin-right:20px; }
+	.mainBoxCont ul li a { padding:0 20px; }
+	
+	/* contents */
+	/* 근태관리 */
+	.attendanceBox { padding-bottom:50px; }
+	/*
+	.separador {
+		 margin-top: 50px; 
+	  overflow: hidden;
+	  height: 20px;
+	}
+
+	.separador:after {
+	  content: '';
+	  display: block;
+	  width: 95%;
+	  height: 30px;
+		margin: -30px auto 0;
+
+	  border-radius: 120px / 10px;
+	  box-shadow: 0px 0px 8px rgba(0,0,0,.6);
+	  transform: rotate(90deg);
+	}
+	*/
+
+	.tblBox { width:180%; }
+	
+	
+	
+	/* 근태 이름선택시, 통화가능 */
+	.att_m_memberBox { 
+		width:50%; 
+		margin:0 auto; 
+		position:absolute;
+		top:50%;
+		left:50%;
+	}
+	.m_memberBox_info { 
+		width:100%; 
+		float:left; 
+		height:430px;
+		margin-top:-200px;
+		margin-left:-50%;
+		background:#fff;
+		border-radius:20px;
+	}
+	.m_memberInfo { 
+		width:90%; 
+		margin:0 auto; 
+		margin-top:30px; 
+		text-align:center; 
+	}
+	.m_memberImg { display:inline-block; width:40%; }
+	.m_memberImg img { width:100%; }
+	.member_detailTeam { width:100%; float:left; margin-top:20px; }
+	.member_detailBox { width:100%; float:left; margin-top:20px; }
+	.member_detailBox ul li { 
+		width:100%; 
+		float:left; 
+		padding:5px 0;
+		border-bottom:1px solid #CFCFCF; 
+	}
+	.basicInfo { width:100%; float:left; }
+	.basicInfo dt { 
+		float:left; 
+		margin:0 20px;
+		color:#9A9A9A; 
+		text-align:left; 
+	}
+	.basicInfo dd { 
+		float:left; 
+		text-align:left; 
+	}
+	.btn_call { 
+		display:inline-block;
+		width:45px;  
+		margin-top:20px; 
+	}
+	.btn_call img { width:100%; }
+	
+	/* 근태관리 변경시 */
+	.layerBox_contents { height:600px; margin-top:-280px; }
+	.btn_layerClose { top:-320px; }
+	.attdSch_modifyBox { height:380px; }
+	
+	/* 영업현황 */
+	.pc_tbl_total { display:none; }
+	.m_tbl_total { display:table; }
+	.m_tbl_total.tbl_sales { width:100%; }
+	.m_tbl_total td { text-align:right; padding-right:15px; }
+	
+	/* 임직원정보 */
+	.teamNameBox { 
+		width:100%; 
+		border:1px solid #ddd; 
+		box-sizing:border-box; 
+		border-bottom:none;
+		margin-bottom:120px;
+	}
+	.teamNameBox ol li {
+		margin:0;
+		border:none;
+	}
+	.teamNameBox ol li a {
+		border-bottom:1px solid #ddd;
+		box-sizing:border-box;
+	}
+	.teamNameBox ol li.on a { border-color:#ddd !important; }
+	.teamNameBox ol li:nth-last-child(1) a {
+		border-bottom:1px solid #ddd;
+	}
+	.partTeamBox {
+		position:static;
+		left:0;
+		top:0;
+		width:100%;
+		height:auto !important;
+	}
+	.empMemberBox { padding-bottom:0; border-bottom:1px solid #ddd; box-sizing:border-box; }
+	.empMemberBox ul li { padding:8px 0; }
+	.empMemberBox_single { 
+		border-color:#ddd !important; 
+		box-sizing:border-box; 
+		border-top:none; 
+		border-left:none; 
+		border-right:none; 
+	}
+	.ico_employee { width:34px; }
+	.btn_employeeInfo { width:34px; margin-right:5px; border:none !important; }
+	.btn_empCall { 
+		display:inline-block; 
+		width:26px;
+		margin-right:20px;
+	}
+	
+	/* 코스관리 */
+	.course_type { width:150%; }
+	.course_type2 { width:100%; }
+	
+	/* 코스 현황 계획 */
+	.planTextBox { width:70%; }
+	.planBox { margin-left:-370px; }
+	.courseImg { float:none; width:50%; margin:0 auto; }
+	.btn_layerClose2 { top:-140px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:90%; margin-left:-230px; }
+	/* 코스관리 추가 요청 개발 2021-12-06 */
+	.courPlanListChk {
+		width:100%; 
+		float:left; 
+		margin-top:50px;
+		height:480px;
+	}
+		
+	
+}
+
+@media screen and (max-width:600px) {
+	
+	/* 코스 현황 계획 */
+	.planBox { margin-left:-350px; }
+	.btn_layerClose2 { left:150px; }
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { margin-left:-220px; }
+
+}
+
+@media screen and (max-width:568px) {
+	
+	.planBox { margin-left:-330px; }
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { margin-left:-210px; }
+
+}
+
+@media screen and (max-width:480px) {
+	
+	/* header */
+	.m_t_header { height:60px; }
+	.m_logo { width:60%; line-height:50px; }
+	/*
+	.m_fixed_menu { height:60px; }
+	.m_fixed_menu ul li { height:60px; }
+	*/
+	/* mobile menu */
+	.btn_m_gnbOpen { line-height:60px; }
+	.btn_m_gnbOpen img { width:70%; }
+	
+	
+	/* container */
+	.container { margin-top:60px; }/* 상단 top 미고정시 수정(삭제)해야할 것 */
+	
+	/* mobile 상단 직원정보+일시 */
+	.m_StaffInfo { height:50px; }
+	.staffInfo_m .m_t_userName,
+	.staffInfo_m .toDay { line-height:50px; }
+	.ico_smile { width:20px; height:20px; line-height:50px; }
+	
+	/* mobile title */
+	.m_s_title { height:50px; line-height:50px; }
+	.m_s_title b { font-size:15px; line-height:50px; }
+	.s_tit_img { width:24px; float:left; line-height:50px; }
+	
+	/* main */
+	/* main contents */
+	.mBox_title { font-size:15px; }
+	.ico_m_comm { margin-right:5px; }
+		
+	
+	/* 근태관리 */
+	/* 정보선택 및 안내사항 */
+	.selectMonth { margin-bottom:30px; }
+	.presentDay { font-size:22px; }
+	.selRadioBox { margin-left:1em; }
+	.selRadioBox .mR20 { margin-right:8px !important; }
+	.selRadioBox label { margin-left:0; }
+	.schdInfo { margin-right:1em; }
+	.schdInfo ul li { margin-left:0; }
+	/* 근태 이름선택시, 통화가능 */
+	.att_m_memberBox { width:60%; }
+	
+	/* 코스관리 */
+	.tabmenu { 
+		width:49%; 
+		float:left; 
+		position:relative; 
+		top:0; 
+	}
+	.tabmenu ul { 
+		position:absolute; 
+		top:44px; 
+		width:100%; 
+		float:left; 
+		display:none;
+		background:#fff;
+	} /* display:none; */
+	.tabmenu ul li { 
+		width:100%; 
+		float:left; 
+		text-align:left; 
+		border-top:none; 
+		text-indent:15px; 
+	}
+	.tabmenu ul li.on { border-color:#ddd; background:#f8f8f8; }
+	.tabmenu ul li.on a { color:#000; }
+	.tabmenu2 { float:right; margin-top:0; }
+	.tabmenu2 ul li { text-align:left; }
+	.selectView { 
+		display:block;
+		width:100%;
+		float:left;
+		background:#fff;
+		border:1px solid #ddd;
+		padding:10px 0;
+		margin-left:0;
+		text-indent:15px;
+		box-sizing:border-box;
+		text-align:left;
+	}
+	.ico_arrowDown {
+		display:inline-block;
+		vertical-align:15px;
+		float:right;
+		margin-right:10px;
+		font-size:12px;
+		color:#cacaca;
+	}
+	.course_type { width:180%; }
+	.course_type2 { width:100%; }
+	.course_type2 .tabmenu2 { float:left; }
+	.photoviewBox ul li { margin-bottom:10px; }
+	
+	/* 코스 현황 계획 */
+	.planTextBox { width:90%; }
+	.planBox { margin-left:-320px; }
+	.courseImg { width:70%; }
+	.coursePlanBox { margin-top:30px; }
+	.btn_layerClose2 { left:180px; }
+	
+	/* 코스관리 작업공유 */
+	
+	.tabmenu_only { width:100% !important; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:100%; margin-left:-190px; }
+	
+	/* 코스관리 추가개발 2022-05-10 진현창 요청 */
+	.btn_downloadExcel {
+		width:90%;
+		float:left;
+		text-align:center;
+	}
+	
+	
+
+}
+
+@media screen and (max-width:414px) {
+	
+	/* mobile menu */
+	.btn_m_gnbOpen { line-height:55px; margin-right:0.5em; }
+	.btn_m_gnbOpen img { width:60%; }
+	
+	/* main */
+	/* main contents */
+	.ico_m_comm { margin-left:12px; }
+	.btn_m_more { margin-right:12px;  }
+	
+	/* 근태관리 */
+	/* 근태 이름선택시, 통화가능 */
+	.m_memberBox_info { height:390px; }
+	.btn_call { width:34px; }
+	
+	/* 코스 현황 계획 */
+	.courseImg { width:75%; }
+	.planBox { margin-left:-275px; }
+	.btn_layerClose2 { left:150px; }
+	
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { width:100%; margin-left:-170px; }
+	.nameListBox ul li { letter-spacing:-1px; }
+	.nL_name { margin:0 8px; }
+	.nL_viewp { margin-right:8px; }
+}
+
+@media screen and (max-width:375px) {
+	
+	/* 근태관리 */
+	/* 근태 이름선택시, 통화가능 */
+	.att_m_memberBox { width:70%; }
+	.m_memberBox_info { height:390px; }
+	.basicInfo dt { margin:0 10px; }
+	
+	/* 근태관리 변경 시 */
+	.tbl_attdSch { width:350%; } 
+	
+	/* 코스관리 */
+	.course_type { width:200%; }
+	.course_type2 { width:100%; }
+	.tabmenu, .tabmenu2 { width:100%; }
+	/* 코스 현황 계획 */
+	.courseImg { width:90%; }
+	.tabmenu3 { margin-top:10px; }
+	.planTextBox { width:95%; }
+	.planBox { margin-left:-260px; }
+	.btnBox2 button { width:80px; }
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { margin-left:-150px; }
+	
+	/* 코스관리 추가개발 2022-05-10 진현창 요청 */
+	.btn_downloadExcel { width:88%;	}
+	.hole.selectView { margin-top:15px; }
+
+}
+
+@media screen and (max-width:360px) {
+	
+	/* 코스 현황 계획 */
+	.planBox { margin-left:-248px; }
+	.btn_layerClose2 { left:130px; }
+	
+}
+
+@media screen and (max-width:320px) {
+	
+	/* header */
+	.m_logo img { margin-left:1em; }
+	/* mobile menu */
+	.btn_m_gnbOpen { margin-right:0px; }
+	
+	/* 근태관리 */
+	/* 근태 이름선택시, 통화가능 */
+	.m_memberBox_info { height:380px; }
+	/* 근태관리 변경시 */
+	.layerBox_contents { height:420px; margin-top:-200px; }
+	.btn_layerClose { top:-235px; }
+	.ly_contents { margin-top:20px; }
+	.attdSch_modifyBox { height:235px; margin-top:20px; }
+	
+	/* 코스 현황 계획 */
+	.courseImg { width:100%; }
+	.planBox { margin-left:-220px; }
+	.btn_layerClose2 { top:-140px; left:110px; }
+	/* 조회확인 추가 요청 개발 *//* 2021-11-18 */
+	.wrapNameList { margin-left:-130px; }
+	.ListCheckBox { width:95%; }
+	/* 코스관리 추가개발 2022-05-10 진현창 요청 */
+	.btn_downloadExcel { width:86%;	}
+	
+}
