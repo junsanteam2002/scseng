@@ -101,9 +101,9 @@
         <p  class="sub">&nbsp;</p>
         <input type="text" id="User_Id" name="User_Id" class="inp_comm" value="" title="아이디 입력" placeholder="아이디 입력" />
         <p  class="sub"></p>
-        <input type="password" id="User_Pwd" Name="User_Pwd" class="inp_comm mT20" value="" title="비밀번호 입력" placeholder="비밀번호 입력" maxlength="10" />
+        <input type="password" id="User_Pwd" Name="User_Pwd" class="inp_comm mT20" value="" title="비밀번호 입력" placeholder="비밀번호 입력" maxlength="20" />
         <p  class="sub"></p>
-        <button type="button" class="btn_login" onclick="Login();">로그인</button>
+        <button type="button" class="btn_login" onclick="Login();"><a target="_self" href="main.html">로그인</a></button>
     </div>    
 </body>
 
@@ -125,7 +125,7 @@
         }			
         
         var theForm = document.User_Login;
-        theForm.action = "./login_p.asp";
+        theForm.action = "./edu.html";
         theForm.submit();
     }
 </script>
