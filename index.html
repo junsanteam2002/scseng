@@ -106,4 +106,28 @@
         <button type="button" class="btn_login" onclick="Login();">로그인</button>
     </div>    
 </body>
+
+<script>
+    $('#User_Pwd').keydown(function(e) {
+        if (e.keyCode == 13) Login();
+    });
+
+    function Login(){
+        if($("#User_Id").val()==""){
+            alert("아이디를 입력해 주세요.");
+            $("#User_Id").focus();
+            return false;
+        }
+        if($("#User_Pwd").val()==""){
+            alert("패스워드를 입력해 주세요.");
+            $("#User_Pwd").focus();
+            return false;
+        }			
+        
+        var theForm = document.User_Login;
+        theForm.action = "./login_p.asp";
+        theForm.submit();
+    }
+</script>
+
 </html>
