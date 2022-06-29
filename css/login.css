@@ -48,7 +48,10 @@ input.inp_comm {
 	padding:8px 0;
 	font-size:14px;
 	font-weight: bold;
+
 }
+
+
 .btn_login {
 	display:inline-block;
 	width:100%;
@@ -59,8 +62,11 @@ input.inp_comm {
 	color:#44398A;
 	font-size:14px;
 	font-weight: bold;
-	text-align:center;
+	text-align:center;       
+	box-shadow: 3px 3px 5px 0px black;   
 }
+
+
 .btn_appDownload { 
 	width:100%; 
 	float:left; 
