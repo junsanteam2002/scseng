@@ -105,6 +105,40 @@ input[id="chkBox"]{
   text-decoration: none;
 }
 
+.question2 {
+  width: 300px;
+  height: 40;
+  margin: 30px auto 0px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;            
+  text-align: left;
+}
+
+.question2 > a {
+  width: 300px;
+  height: 40px;
+
+  background-color: rgb(243, 243, 164);
+  border-radius: 8px;
+  
+  margin-bottom: 10px;
+
+  font-size: 14px;
+  font-weight: bold;
+  color:#44398A;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;          
+  
+  text-decoration: none;
+}
+
 .chk_sub {
   width: 300px;
   margin: 30px auto 0px auto;  color : white;
