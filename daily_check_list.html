@@ -46,41 +46,6 @@
             margin-top: 0px;
         }   
 
-        .wrap {
-            width: 300px;
-            margin: 30px auto 0px auto;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;            
-        }
-
-        .wrap > a {
-            width: 300px;
-            height: 50px;
-
-            background-color: white;
-            border-radius: 8px;
-            
-            margin-bottom: 10px;
-
-            font-size: 14px;
-            font-weight: bold;
-            color:#44398A;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;          
-            
-            text-decoration: none;
-
-            box-shadow: 3px 3px 5px 0px black;
-        }
-        .wrap > a:hover {
-            background-color: #f2f2f2;
-        } 
 
     </style>
 </head>
@@ -90,5 +55,24 @@
         <h1 class="main">서경엔지니어링 안전관리</h1>
         <p  class="sub"> 일일안전점검</p>
     </div>    
+    <div class="question">
+        <a > 1. 당신의 건강상태는 어떻습니까?</a>
+        <div class="chk_sub">
+            <input  type="checkbox" name="Q01" value="YES">괜찬습니다.
+            <input  type="checkbox" name="Q01" value="NO">아픈곳이 있습니다.
+        </div>        
+        <p  class="sub"> &nbsp;</p>
+        <a > 2. 작업차량을 점검하셨습니까?</a>
+        <div class="chk_sub">
+            <input  type="checkbox" name="Q02" value="YES">예, 점검하였습니다.
+            <input  type="checkbox" name="Q02" value="NO">아니오, 아직 점검하지 못하였습니다.
+        </div>        
+
+
+        <p  class="sub"> &nbsp;</p>
+        <button type="button" class="d_btn" onclick="check_commit();"><a target="_self" href="daily_check_list.html">확인</a></button>
+    </div>    
+
+
 </body>
 </html>
