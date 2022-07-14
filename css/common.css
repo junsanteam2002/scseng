@@ -139,6 +139,27 @@ input[id="chkBox"]{
   text-decoration: none;
 }
 
+.line {
+
+  width: 300px;
+  height: 1px;
+
+  background-color: White;
+  border-radius: 0px;
+
+  font-size: 18px;
+  font-weight: bold;
+  color:white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;          
+
+  text-decoration: none;
+
+  }  
+
 .chk_sub {
   width: 300px;
   margin: 30px auto 0px auto;  color : white;
@@ -164,6 +185,14 @@ input[id="chkBox"]{
 
 .img-circle {  /*사원이미지 */
     border-radius: 50%;
+}
+
+.search-right img {
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  margin-top: 60px;
+  cursor: pointer;
 }
 
 /*
