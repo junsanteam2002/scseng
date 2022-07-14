@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:title" content="서경엔지니어링 - 안전관리">
+    <meta property="og:description" content="안전에 진심">
+    <meta property="og:image" content="images/ic_scs.PNG">
+
+    <link rel="icon" type="image/x-icon" href="https://junsanteam2002.github.io/scseng/favicon.ico">
+
     <link rel="stylesheet" type="text/css" href="css/common.css" />
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
@@ -12,9 +18,10 @@
 	<link rel="stylesheet" type="text/css" href="css/login.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
+	
     <title>서경엔지니어링 - 안전관리</title>
     <style>
+
         body {
             background-color : #44398A;
         }
@@ -47,17 +54,6 @@
         }   
 
 
-        .bottom {
-            width: 300px;
-            margin: 30px auto 0px auto;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;    
-                    
-        }
-
 
     </style>
 </head>
@@ -65,15 +61,38 @@
     <div class="wrap">
         <div class="profile"></div>
         <h1 class="main">서경엔지니어링 안전관리</h1>
-        <p  class="sub"> &nbsp;</p>
-        <p  class="sub"> 홍길동님 안녕하세요? 오늘도 안심!!!</p>
-        <p  class="sub"> &nbsp;</p>
-        <a target="_self" href="safe_check.html">안전점검[개인]</a>
-        <a target="_self" href="safe_check_diary.html">안전점검[관리자]</a>
-        <a target="_self" href="safe_notify.html">위험신고</a>
-        <a target="_self" href="safe_rule.html">안전규정</a>
-        <a target="_self" href="edu.html">안전교육</a>
-    </div>
-
+        <p  class="sub">오늘도 안전하게!!!</p>
+        <p  class="sub">&nbsp;</p>
+        <p  class="sub">&nbsp;</p>
+        <input type="text" id="User_Id" name="User_Id" class="inp_comm" value="" title="아이디 입력" placeholder="아이디 입력" />
+        <p  class="sub"></p>
+        <input type="password" id="User_Pwd" Name="User_Pwd" class="inp_comm mT20" value="" title="비밀번호 입력" placeholder="비밀번호 입력" maxlength="20" />
+        <p  class="sub"></p>
+        <button type="button" class="btn_login" onclick="Login();"><a target="_self" href="main.html">로그인</a></button>
+    </div>    
 </body>
+
+<script>
+    $('#User_Pwd').keydown(function(e) {
+        if (e.keyCode == 13) Login();
+    });
+
+    function Login(){
+        if($("#User_Id").val()==""){
+            alert("아이디를 입력해 주세요.");
+            $("#User_Id").focus();
+            return false;
+        }
+        if($("#User_Pwd").val()==""){
+            alert("패스워드를 입력해 주세요.");
+            $("#User_Pwd").focus();
+            return false;
+        }			
+        
+        var theForm = document.User_Login;
+        theForm.action = "./edu.html";
+        theForm.submit();
+    }
+</script>
+
 </html>
