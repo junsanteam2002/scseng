@@ -85,9 +85,9 @@
     <div class="question">
         <table style="width:300px">
             <tr>
-                <td class="sub" style="width:240px;height:40px;text-align:center;">체크항목</td>
-                <td class="sub"><a style="width:30px;height:40px;text-align:center;">YES</td>
-                <td class="sub"><a style="width:30px;height:40px;text-align:center;">NO</td>
+                <td class="sub" style="width:240px;height:50px;text-align:center;">점검항목</td>
+                <td class="sub"><a style="width:30px;height:50px;text-align:center;">YES</td>
+                <td class="sub"><a style="width:30px;height:50px;text-align:center;">NO</td>
             </tr>
             <tr>
                 <td class="sub" >1. 아픈곳은 없습니다.</td>
@@ -95,17 +95,43 @@
                 <td><input  type="checkbox" name="Q01" value="NO"></td>
             </tr>
             <tr>
-                <td class="sub" style="width:70px;height:40px">2. 작업차량을 점검하였습니다.</td>
+                <td class="sub" style="width:70px;height:50px">2. 작업차량을 점검하였으며, 문제가 없습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="width:70px;height:50px">3. 안전모를 착용하였습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="width:70px;height:50px">4. 온열질환에 대비하여 교육 및 물품을 지급받았습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="width:70px;height:50px">5. 작업현장에 위험한 요소가 없습니다.</td>
                 <td><input  type="checkbox" name="Q01" value="YES"></td>
                 <td><input  type="checkbox" name="Q01" value="NO"></td>
             </tr>
         </table>    
 
-
         <p  class="sub"> &nbsp;</p>
-        <button type="button" class="d_btn" onclick="check_commit();"><a target="_self" href="daily_check_list.html">확인</a></button>
+        <p  class="sub"> 
+            <input  type="checkbox" name="summit_check" > 위 점검항목에 대하여 정확하게 기입하였습니다. 오늘 작업현장은 안전이 확보되었으며, 안전하게 작업할 것을 확약합니다.
+        </p>
+        <p  class="sub"> &nbsp;</p>
+        <button type="button" class="d_btn" onclick="check_commit();"><a target="_self" href="safe_check.html">확인</a></button>
     </div>    
 
+</div>    
 
+<script>
+function check_commit(){
+    alert("안전점검결과가 등록되었습니다..");
+    }			
+    
+
+</script>    
 </body>
 </html>
