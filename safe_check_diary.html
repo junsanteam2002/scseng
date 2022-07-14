@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>서경엔지니어링 - 안전관리</title>
+    <style>
+        body {
+            background-color : #44398A;
+        }
+        .profile {
+            width : 100px;
+            height : 100px;
+
+            background-color : green;
+            border-radius : 100%;
+
+            border : 2px solid white;
+
+            background-image: url('images/ic_scs.PNG');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .main {
+            color : white;
+            font-size: 20px;
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            color : white;
+            font-size: 14px;
+            margin-top: 0px;
+        }   
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="profile"></div>
+        <h1 class="main">서경엔지니어링 안전관리</h1>
+        <p  class="sub"> 안전점검[관리자]</p>
+        <p  class="sub"> &nbsp;</p>
+
+    </div>    
+ 
+    <div class="question">
+        <table style="width:300px">
+            <tr>
+                <td class="sub" style="height:40px">현장명선택</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="task" style="width:300px;height:25px" >
+                        <option value="" >선택하세요.</option>
+                        <option value="2000">촉석아파트 CCTV 구축 공사</option>
+                        <option value="2500">서경타니CC 전기 증설 공사</option>
+                    </select>
+                </td>  
+            </tr>    
+            <tr>
+                <td class="sub" style="height:40px">금일 작업자 명단</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="worker_list" name="worker_list" class="inp_comm" value="" title="" placeholder="" />
+                </td>  
+            </tr>    
+        </table>  
+
+    </div>
+
+    <div class="question2">
+
+        <div class="chk_sub">
+            <table style="width:300px">
+            <tr>
+                <td class="sub" style="width:240px;height:40px;text-align:center;">체크항목</td>
+                <td class="sub"><a style="width:30px;height:40px;text-align:center;">YES</td>
+                <td class="sub"><a style="width:30px;height:40px;text-align:center;">NO</td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:50px;">작업자중 아픈 사람이 없습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:50px;">안전교육을 실시하였습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:50px;">작업현장에 위험사항이 없습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:50px;">금일 작업계획을 공유하고 숙지하였습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            </table>
+
+            <p  class="sub"> &nbsp;</p>
+            <button type="button" class="d_btn" onclick="check_commit();"><a target="_self" href="safe_check_diary.html">확인</a></button>
+        </div>        
+    </div>    
+
+    <script>
+        function check_commit(){
+            alert("안전점검일지가 등록되었습니다..");
+            }			
+            
+		
+    </script>    
+
+</body>
+</html>
