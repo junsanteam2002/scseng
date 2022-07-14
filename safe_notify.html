@@ -48,7 +48,7 @@
         }   
 
         .wrap2 {
-            width: 300px;
+            width: 200px;
             margin: 30px auto 0px auto;
             display: flex;
             flex-direction: column;
@@ -57,7 +57,9 @@
 
             font-size: 14px;
             font-weight: bold;
-            color:white;       
+            color:white;     
+            
+            border: 1px solid White;
 
         }
 
@@ -104,24 +106,22 @@
     </div>        
 
     <div class="wrap2">
-        <div onclick="go_move('safe_notify_detail.html')">[위험신고|조치결과 확인하기]</a></div>
+        <div onclick="go_move('safe_notify_detail.html')">위험신고|조치결과 확인하기</a></div>
     </div>
     
 
 
 <script>
-        function check_commit(){
-           
 
-            alert("위험신고가 정상적으로 등록되었습니다.");
-            }			
+    function check_commit(){
+        alert("위험신고가 정상적으로 등록되었습니다.");
+    }			
             
-    
     function go_move(ncode) {
 		location.href='' + ncode;
 	}        
-    
-		
-    </script>   
+
+</script>   
+
 </body>
 </html>
