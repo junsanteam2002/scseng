@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>서경엔지니어링 - 안전관리</title>
+    <style>
+        body {
+            background-color : #44398A;
+        }
+        .profile {
+            width : 100px;
+            height : 100px;
+
+            background-color : green;
+            border-radius : 100%;
+
+            border : 2px solid white;
+
+            background-image: url('images/ic_scs.PNG');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .main {
+            color : white;
+            font-size: 20px;
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            color : white;
+            font-size: 14px;
+            margin-top: 0px;
+        }   
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="profile"></div>
+        <h1 class="main">서경엔지니어링 안전관리</h1>
+        <p  class="sub"> 안전점검[관리자]</p>
+        <p  class="sub"> &nbsp;</p>
+
+    </div>    
+ 
+    <div class="question">
+        <table style="width:300px">
+            <tr>
+                <td class="sub" style="width:50px;height:40px">현장 안전관리자</td>
+            </tr>
+            <tr>
+                <td ><input type="text" id="worker" name="worker" value="홍길동" style="width:230px;height:25px"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:40px">현장명선택</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="task" id="task" style="width:300px;height:25px" >
+                        <option value="">선택하세요.</option>
+                        <option value="2000">촉석아파트 CCTV 구축 공사</option>
+                        <option value="2500">서경타니CC 전기 증설 공사</option>
+                    </select>
+                </td>  
+            </tr>    
+            <tr>
+                <td class="sub" style="height:40px">금일 작업자 명단</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" id="worker_list" name="worker_list" class="inp_comm" value="" title="" placeholder="" />
+                </td>  
+            </tr>    
+        </table>  
+
+    </div>
+
+    <div class="question2">
+
+        <div class="chk_sub">
+            <table style="width:300px">
+            <tr>
+                <td class="sub" style="width:240px;height:30px;text-align:center;">점검항목</td>
+                <td class="sub"><a style="width:30px;height:30px;text-align:center;">YES</td>
+                <td class="sub"><a style="width:30px;height:30px;text-align:center;">NO</td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">1.작업자중 아픈 사람이 없습니다.</td>
+                <td><input  type="checkbox" name="Q01" value="YES"></td>
+                <td><input  type="checkbox" name="Q01" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">2.안전교육을 실시하였습니다.</td>
+                <td><input  type="checkbox" name="Q02" value="YES"></td>
+                <td><input  type="checkbox" name="Q02" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">3.작업현장에 위험사항이 없습니다.</td>
+                <td><input  type="checkbox" name="Q03" value="YES"></td>
+                <td><input  type="checkbox" name="Q03" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">4.금일 작업계획을 공유하고 숙지하였습니다.</td>
+                <td><input  type="checkbox" name="Q04" value="YES"></td>
+                <td><input  type="checkbox" name="Q04" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">5.근골격계 질환예방을 위하여 스트레칭을 실시하였습니다.
+                                                  <a target="_blank" href="images/edu_stretch.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q05" value="YES"></td>
+                <td><input  type="checkbox" name="Q05" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">6.모든 작업자가 안전모, 안전화 등 안전장구를 착용하였습니다.
+                                                  <a target="_blank" href="images/edu_safe_item.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q06" value="YES"></td>
+                <td><input  type="checkbox" name="Q06" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">7.감전사고방지를 위한 조치를 하였습니다.
+                                                 <a target="_blank" href="images/edu_eletric_damage.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q07" value="YES"></td>
+                <td><input  type="checkbox" name="Q07" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">8.온열질환 발생에 대비하여 응급조치교육 및 물품을 지급하였습니다.
+                                                   <a target="_blank" href="images/edu_warmth damage.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q08" value="YES"></td>
+                <td><input  type="checkbox" name="Q08" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">9.밀폐공간 작업에 대해 안전이 확보되었습니다.
+                                                  <a target="_blank" href="images/edu_seal_damage.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q09" value="YES"></td>
+                <td><input  type="checkbox" name="Q09" value="NO"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px;">10.이동식 사다리 작업에 대해 안전이 확보되었습니다.
+                                                  <a target="_blank" href="images/edu_ladder_damage.JPG" >[확인]</a></td>
+                <td><input  type="checkbox" name="Q10" value="YES"></td>
+                <td><input  type="checkbox" name="Q10" value="NO"></td>
+            </tr>
+            </table>
+
+            <p  class="sub"> &nbsp;</p>
+            <p  class="sub"> 
+                <input  type="checkbox" name="summit_check" > 위 점검항목에 대하여 정확하게 기입하였습니다. 오늘 작업현장은 안전이 확보되었으며, 안전하게 작업하도록 관리할 것을 확약합니다.
+            </p>
+            <p  class="sub"> &nbsp;</p>
+            <button type="button" class="d_btn" style="width:300px;" onclick="check_commit();">확인</button>
+            <p  class="sub"> &nbsp;</p>
+        </div>        
+    </div>    
+
+    <script>
+        function check_commit(){
+           
+            if($("#task").val()==""){
+                alert("현장명을 선택해주세요.");
+                $("#task").focus();
+                return false;
+            }
+
+            if($("#worker_list").val()==""){
+                alert("금일 작업자명단을 입력해주세요.");
+                $("#worker_list").focus();
+                return false;
+            }
+        
+
+            alert("안전점검일지가 등록되었습니다.");
+
+
+       		location.href='safe_check_diary.html';
+
+        }			
+            
+
+
+		
+    </script>    
+
+</body>
+</html>
