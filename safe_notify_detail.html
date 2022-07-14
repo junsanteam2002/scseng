@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <title>서경엔지니어링 - 안전관리</title>
+    <style>
+        body {
+            background-color : #44398A;
+        }
+        .profile {
+            width : 100px;
+            height : 100px;
+
+            background-color : green;
+            border-radius : 100%;
+
+            border : 2px solid white;
+
+            background-image: url('images/ic_scs.PNG');
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .main {
+            color : white;
+            font-size: 20px;
+
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sub {
+            color : white;
+            font-size: 14px;
+            margin-top: 0px;
+        }   
+
+
+        .top_line {
+
+            width: 300px;
+            height: 1px;
+
+            background-color: White;
+            border-radius: 0px;
+
+            font-size: 18px;
+            font-weight: bold;
+            color:white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;          
+
+            text-decoration: none;
+
+            }   
+
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="profile"></div>
+        <h1 class="main">서경엔지니어링 안전관리</h1>
+        <p  class="sub"> 위험신고|조치결과</p>
+        <p  class="sub">&nbsp;</p>
+    </div>    
+
+    <div class="wrap">
+        <table style="width:300px">
+            <tr>
+                <td class="sub" style="height:20px">신고일자</td>
+                <td class="sub" style="width:230px;height:20px">2022-07-10</td>
+            </tr> 
+            <tr>
+                <td class="sub" style="width:70px;height:20px">신고자명</td>
+                <td class="sub" style="width:230px;height:20px">홍길동</td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:20px">장소</td>
+                <td class="sub" style="width:230px;height:20px">창고</td>
+            <tr>
+                <td class="sub" style="height:60px">내용</td>
+                <td class="sub" style="width:230px;height:60px">창고내 사다리가 고정이 잘 안되어 위험합니다. 조치바랍니다. </td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:30px">사진첨부</td>
+                <td class="sub" style="width:230px"><img src="images/notify-20220715001.jpg" style="width:230px"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px">조치내용</td>
+                <td class="sub" style="width:230px;height:60px">[답변:김철이|2022-07-13]사다리 고정작업을 완료하였습니다.</td>
+            </tr>
+        </table> 
+    </div>        
+
+    <div class="wrap">
+        <h1 class="top_line"></a></h1>
+    </div>
+    
+    <div class="wrap">
+        <table style="width:300px">
+            <tr>
+                <td class="sub" style="height:20px">신고일자</td>
+                <td class="sub" style="width:230px;height:20px">2022-06-19</td>
+            </tr> 
+            <tr>
+                <td class="sub" style="width:70px;height:20px">신고자명</td>
+                <td class="sub" style="width:230px;height:20px">이철우</td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:20px">장소</td>
+                <td class="sub" style="width:230px;height:20px">촉석아파트 CCTV 구축 공사 현장</td>
+            <tr>
+                <td class="sub" style="height:60px">내용</td>
+                <td class="sub" style="width:230px;height:60px">주차장 작업차량 공간 확보안되어 사고 위험이 높습니다. 조치바랍니다. </td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:30px">사진첨부</td>
+                <td class="sub" style="width:230px"><img src="images/notify-20220619001.jpg" style="width:230px"></td>
+            </tr>
+            <tr>
+                <td class="sub" style="height:60px">조치내용</td>
+                <td class="sub" style="width:230px;height:60px">[답변:김철이|2022-06-19]관리사무소에 공간 확보 협조요청하였습니다.</td>
+            </tr>
+        </table> 
+    </div>        
+
+    <div class="wrap">
+        <p  class="sub"> &nbsp;</p>
+    </div>    
+
+<script>
+        function check_commit(){
+           
+
+            alert("위험신고가 정상적으로 등록되었습니다.");
+            }			
+            
+		
+    </script>   
+</body>
+</html>
